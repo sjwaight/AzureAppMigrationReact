@@ -9,7 +9,7 @@ This project requires Node.js 8+ to build. It won't work well without the [produ
 ## To Setup
 
 1. Create a file called `.env` in the root folder of this project
-1. Put two variables in it, `PRODUCT_SERVICE_BASE_URL` and `INVENTORY_SERVICE_BASE_URL` with the correct URLs to your two REST services.
+2. Put two variables in it, `PRODUCT_SERVICE_BASE_URL` and `INVENTORY_SERVICE_BASE_URL` with the correct URLs to your two REST services.
    - If running locally, copy the snippet below.
    - If running in production, make sure the URLs match where the services are
    - Make sure CORS headers are set correctly in other services.
@@ -18,8 +18,8 @@ This project requires Node.js 8+ to build. It won't work well without the [produ
 PRODUCT_SERVICE_BASE_URL=http://localhost:8000
 INVENTORY_SERVICE_BASE_URL=http://localhost:5000
 ```
-1. Set `APPINSIGHTS_INSTRUMENTATIONKEY` with Applications Insights Telemetry key
-1. (Optional) Set `DISPLAY_SQL_INFO`=`true` to display SQL Server information from Inventory Service. **Leave empty if you don't want to show this.**
+3. Set `APPINSIGHTS_INSTRUMENTATIONKEY` with Applications Insights Telemetry key
+4. (Optional) Set `DISPLAY_SQL_INFO`=`true` to display SQL Server information from Inventory Service. **Leave empty if you don't want to show this.**
 
 ## To Develop
 
