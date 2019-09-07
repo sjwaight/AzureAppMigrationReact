@@ -2,6 +2,8 @@ import React from "react";
 import ProductTable from "./ProductTable";
 import Timings from "./Timings";
 import SqlInfo from "./SqlInfo";
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import { ai } from './TelemetryService';
 
 class MainTable extends React.Component {
   constructor(props) {
@@ -44,4 +46,5 @@ class MainTable extends React.Component {
   }
 }
 
-export default MainTable;
+
+export default withAITracking(ai.reactPlugin, MainTable);

@@ -1,6 +1,8 @@
 // taken from React docs
 import React from "react";
 import { createPortal } from "react-dom";
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import { ai } from './TelemetryService';
 
 const modalRoot = document.getElementById("modal");
 
@@ -23,4 +25,4 @@ class Modal extends React.Component {
   }
 }
 
-export default Modal;
+export default withAITracking(ai.reactPlugin, Modal);

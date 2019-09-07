@@ -1,4 +1,6 @@
 import React from "react";
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import { ai } from './TelemetryService';
 
 class SkuRequestor extends React.Component {
   constructor(props) {
@@ -55,4 +57,4 @@ class SkuRequestor extends React.Component {
   }
 }
 
-export default SkuRequestor;
+export default withAITracking(ai.reactPlugin, SkuRequestor);

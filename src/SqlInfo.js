@@ -1,4 +1,6 @@
 import React from "react";
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import { ai } from './TelemetryService';
 
 class SqlInfo extends React.Component {
   constructor(props) {
@@ -30,4 +32,4 @@ class SqlInfo extends React.Component {
   }
 }
 
-export default SqlInfo;
+export default withAITracking(ai.reactPlugin, SqlInfo);

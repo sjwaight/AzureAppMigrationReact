@@ -2,6 +2,9 @@ import React from "react";
 import { Column, Table, AutoSizer, InfiniteLoader } from "react-virtualized";
 import Modal from "./Modal";
 import ProductDetails from "./ProductDetails";
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import { ai } from './TelemetryService';
+import { EventsDiscardedReason } from "@microsoft/applicationinsights-core-js";
 
 class ProductTable extends React.Component {
   constructor(props) {
@@ -171,4 +174,4 @@ class ProductTable extends React.Component {
   }
 }
 
-export default ProductTable;
+export default withAITracking(ai.reactPlugin, ProductTable);

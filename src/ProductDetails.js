@@ -1,4 +1,6 @@
 import React from "react";
+import { withAITracking } from '@microsoft/applicationinsights-react-js';
+import { ai } from './TelemetryService';
 
 class ProductDetails extends React.Component {
   constructor(props) {
@@ -138,4 +140,4 @@ class ProductDetails extends React.Component {
   }
 }
 
-export default ProductDetails;
+export default withAITracking(ai.reactPlugin, ProductDetails);

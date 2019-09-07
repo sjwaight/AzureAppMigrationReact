@@ -4,11 +4,11 @@ import { Router } from "@reach/router";
 import MainTable from "./MainTable";
 import Nav from "./Nav";
 import SkuRequestor from "./SkuRequestor";
+import { createBrowserHistory } from "history";
+import { ai } from './TelemetryService';
 
-const instrumentationKey = process.env.APPINSIGHTS_INSTRUMENTATIONKEY;
-if (instrumentationKey) {
-  import("./app-insights");
-}
+const history = createBrowserHistory({ basename: '' });
+ai.initialize({ history: history });
 
 class App extends React.Component {
   render() {

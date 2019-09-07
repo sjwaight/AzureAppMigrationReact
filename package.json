@@ -19,7 +19,10 @@
     "@reach/router": "^1.2.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-virtualized": "^9.20.1"
+    "react-virtualized": "^9.20.1",
+    "@microsoft/applicationinsights-react-js": "^2.1.1",
+    "@microsoft/applicationinsights-web": "^2.1.1",
+    "history": "^4.9.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
